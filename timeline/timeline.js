@@ -142,7 +142,9 @@ var Timeline =
             value: function calculateItemsPerPage() {
                 if (this.screenWidth > 1240) {
                     return this.options.itemsPerPage;
-                } else if (this.screenWidth > 1100) {} else if (this.screenWidth > 850) {
+                } else if (this.screenWidth > 1100) {
+                    return 5;
+                } else if (this.screenWidth > 850) {
                     return 4;
                 } else if (this.screenWidth > 650) {
                     return 3;

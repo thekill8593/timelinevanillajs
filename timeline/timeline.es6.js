@@ -113,7 +113,7 @@ class Timeline {
         if (this.screenWidth > 1240) {
             return this.options.itemsPerPage;
         }else if (this.screenWidth > 1100) {
-
+            return 5;
         }else if (this.screenWidth > 850) {
             return 4;
         } else if (this.screenWidth > 650) {
