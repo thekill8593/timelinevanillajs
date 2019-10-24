@@ -1,0 +1,25 @@
+.colored-box:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 110px;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -60px;
+}
+
+.colored-box-inverted:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 110px;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 60px;
+}
+
+.time-line-item {
+
+}
