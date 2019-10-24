@@ -1,5 +1,3 @@
-<?php ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,14 +10,14 @@
 <body>
 	<div class="bg-gray-500 w-full h-screen flex justify-center items-center flex-col">
 		<div class="m-auto  relative overflow-hidden" id="timeline-container">
-            <div id="btn-right" class="w-8 h-8 rounded-full absolute cursor-pointer shadow-lg" style="top: calc(50% - 20px); z-index: 50;">
+            <div id="btn-left" class="w-8 h-8 rounded-full absolute cursor-pointer shadow-lg hidden" style="top: calc(50% - 20px); z-index: 50;">
                 <i class="fas fa-arrow-circle-left text-gray-400 fa-2x hover:text-gray-600"></i>
             </div>
-            <div id="btn-left" class="w-8 h-8 rounded-full absolute cursor-pointer shadow-lg" style="top: calc(50% - 20px); right: 0; z-index: 50;">
+            <div id="btn-right" class="w-8 h-8 rounded-full absolute cursor-pointer shadow-lg hidden" style="top: calc(50% - 20px); right: 0; z-index: 50;">
                 <i class="fas fa-arrow-circle-right text-gray-400 fa-2x hover:text-gray-600"></i>
             </div>
 			<div class="timeline flex" id="timeline">
-                <?php for($i = 0; $i < 10; $i++): ?>
+                <?php for($i = 0; $i < 5; $i++): ?>
 				    <div class="flex flex-col items-center time-line-item">
                         <div class="relative z-50 mt-2 w-20 h-20 rounded-full bg-red-500 flex items-center justify-center">
                             <i class="fas fa-handshake fa-3x text-white"></i>
@@ -50,6 +48,13 @@
 	</div>
 
 
-	<script type="text/javascript" src="timeline/timeline.js"></script>
+	<script type="text/javascript" src="timeline/timeline.min.js"></script>
+    <script>
+        window.onload = function () {
+            (new Timeline({
+                itemsPerPage: 6
+            }));
+        };
+    </script>
 </body>
 </html>
